@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container">
+  <br>
+  <br>
+  <br>
+
+  <h3>Search by Programming Experience</h3>
+  <br>
+  <form class="col s12" role="search" action="{% url 'location' %}">
+    <div class="row">
+      <div class="input-field col s12 black-text">
+        <select name="tutor" class="black-text">
+          <option class="black-text value=" Master"><span>Master</span></option>
+          <option class="black-text value=" Expert"><span>Expert</span></option>
+          <option class="black-text value=" Professional">ProfessionalExpert</option>
+          <option class="black-text value=" Amateur">Amateur</option>
+        </select>
+        <label>Experience</label>
+      </div>
+    </div>
+    <div class="row">
+      <a href="" type="submit" class="btn green">Search</a>
+    </div>
+</div>
+</form>
+</div>
+<br><br>
+<div class="container">
+  <div class="row">
+    {% if tutors %}
+    <h6>Found {{ tutors|length }} {{message}}</h6>
+    {% else %}
+    <h6> Found 0 tutors with such .</h6>
+    <p> {{message}}</p>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+
+    {% if tutors %}
+    {% for tutor in tutors %}
+    <div class="col-sm-6 col-md-6">
+      <div class="col s12 m4 l4">
+        <a href="/tutor/{{tutor.id}}">
+          <div class="card mini-projects">
+            <div class="container-fluid">
+              <div class="card-content">
+                <div class="container">
+                  <span class="card-title center-align">
+                    <h6>{{tutor.tutor_name}}</h6>
+                  </span>
+                </div>
+              </div>
+              <div class="card-image">
+                <img class="img" src="{{tutor.tutor_image.url}}" alt="">
+              </div>
+              <div class="card-content spacer">
+                <br>
+                <br>
+                <br>
+              </div>
+              <div class="card-content">
+                {{tutor.tutor_email}}
+
+                <br>
+
+                <br>
+
+                tutor Location: {{tutor.tutor_location}}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+{% endblock %}
