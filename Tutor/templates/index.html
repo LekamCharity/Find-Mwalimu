@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container-fluid" id="display">
+    <div class="container">
+        <div class="card flow-text white-text text-center black" id="display-text">
+            <div class="card-content center-align">
+                <h1>Get Programming skills</h1>
+            </div>
+            <div class="card-content center-align">
+                <p>Get personal expert advice in programming and software development today</p>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid all-projects" id="#projectarea">
+    <br>
+    <br>
+    <br>
+
+    <h4 class="center-align" id="works">Featured Mwalimu</h4>
+    <br>
+
+    <div class="container">
+
+        <div class="row">
+            {% for tutor in tutors %}
+            <!-- displaying News articles -->
+            <div class="col s12 m4 14">
+                <a class="black-text" href="/tutor/{{tutor.id}}">
+                    <div class="card tutor-display container-fluid">
+                        <div class="card-image">
+                            <img src="{{tutor.tutor_image.url}}" alt="">
+                            <span class="card-title">{{tutor.tutor_name}}</span>
+                        </div>
+                        <div class="card-content">
+                            {{tutor.tutor_bio}}
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+            {% empty %}
+            <div class="row">
+                <h2 class="text-center">There is no Mwalimu at the moment</h2>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
