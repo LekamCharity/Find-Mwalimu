@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <nav>
+        <div class="nav-wrapper green">
+            <ul class="">
+                <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">Menu</a></li>
+                <li><a href="{% url 'location' %}"><i class="material-icons">search</i></a></li>
+            </ul>
+            <a href="{% url 'index' %}" class="brand-logo center">Find-Mwalimu</a>
+            <ul id="nav-mobile" class="right">
+                <li class="yellow"><a href="#" class=" black-text">Login/Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+
+<ul id="slide-out" class="sidenav green white-text">
+    {% if user.is_authenticated %}
+    <li>
+        <div class="user-view">
+            <div class="background">
+                <img src="images/office.jpg">
+            </div>
+        </div>
+    </li>
+    {% else %}
+    <li>
+        <a class="btn yellow">Login</a>
+    </li>
+    {% endif %}
+    <li><a href="#!"><i class="material-icons">people</i>Available Mwalimu</a></li>
+
+    <li><a href="#!"><i class="material-icons">star</i>Featured Mwalimu</a></li>
+
+    <li>
+        <div class="divider"></div>
+    </li>
+
+    <li><a class="subheader">Find Mwalimu By<a href="#"></a></li>
+
+    <li><a class="waves-effect" href="{% url 'name' %}"><i class="material-icons">search</i>Name</a></li>
+
+    <li><a class="waves-effect" href="{% url 'location' %}"><i class="material-icons">search</i>Location</a></li>
+
+    <li><a class="waves-effect" href="{% url 'index' %}"><i class="material-icons">search</i>Programming Language</a>
+    </li>
+
+    <li><a class="waves-effect" href="{% url 'experience' %}"><i class="material-icons">search</i>Programming
+            Experience</a></li>
+</ul>
