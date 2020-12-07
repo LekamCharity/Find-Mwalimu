@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+  {% block content %}
+ <div class="project-detail" id="display1">
+        <div class="container-fluid showcase1">
+           <div class="container">
+                <br>
+                <br>
+                <br>
+    
+                
+                
+                <div class="row">
+                        {% for tutor in tutor %}
+                                <div class="col s12 m6">
+                                        <img src="{{tutor.tutor_image.url}}"  class="img-responsive tutor-art" alt="">
+                                </div>
+
+                                <br><br>
+                        <div class="col s12 m6">
+                                <div class="row">
+                                        <div class="row">
+                                                <h1 class="text-center">{{tutor.tutor_name}}</h1>
+                                        </div>
+                                        
+                                        <p>Email: {{tutor.tutor_email}}</p>
+
+                                        <p>Bio: {{tutor.tutor_bio}}</p>
+
+                                        <p>Experience: {{tutor.programming_experience   }}</p>
+
+                                        <p>Programming Language(s):
+                                                {% for language in tutor.languages.all %}
+                                                        <span>{{ language }}</span>
+                                                {% endfor %}
+                                        </p>
+                        </div>
+                                {% endfor %}
+
+                                <div class="btn green">Request Services</div>
+                </div>
+            
+            <br>
+            <br>
+            <br>
+          </div>
+            
+        </div>
+</div>
+  {% endblock %}
