@@ -72,5 +72,8 @@ Open the application on your browser `127.0.0.1:8000`.
 If you have any question or contributions, please email me at [lekamcharity@gmail.com]  
 
 ### License
-  [MIT](https://github.com/LekamCharity/Find-Mwalimu/blob/master/License) Copyright (c) 2020 Lekam Charity
+  [MIT](https://github.com/LekamCharity/Find-Mwalimu/blob/master/License)
+  
+## Copyright
+© 2020 Lekam Charity
 
