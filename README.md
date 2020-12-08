@@ -10,7 +10,7 @@ This is a django web application that helps students who are interested in learn
 
 
 ## Figma Link
-
+https://www.figma.com/file/wFdacjYrBORQUuvTs6UdZ6/Untitled?node-id=0%3A1
 
 ## User Story  
   
