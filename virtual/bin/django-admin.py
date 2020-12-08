@@ -1,4 +1,4 @@
-#!/home/moringa/Desktop/Find-Mwalimu/virtual/bin/python3
+#!/home/moringa/Desktop/DJANGO/Find-Mwalimu/virtual/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
