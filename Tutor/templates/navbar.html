@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <nav>
-        <div class="nav-wrapper green">
+        <div class="nav-wrapper blue">
             <ul class="">
                 <li><a href="#" data-target="slide-out" class="sidenav-trigger show-on-large">Menu</a></li>
                 <li><a href="{% url 'location' %}"><i class="material-icons">search</i></a></li>
@@ -14,7 +14,7 @@
 </div>
 
 
-<ul id="slide-out" class="sidenav green white-text">
+<ul id="slide-out" class="sidenav blue white-text">
     {% if user.is_authenticated %}
     <li>
         <div class="user-view">
@@ -41,10 +41,4 @@
     <li><a class="waves-effect" href="{% url 'name' %}"><i class="material-icons">search</i>Name</a></li>
 
     <li><a class="waves-effect" href="{% url 'location' %}"><i class="material-icons">search</i>Location</a></li>
-
-    <li><a class="waves-effect" href="{% url 'index' %}"><i class="material-icons">search</i>Programming Language</a>
-    </li>
-
-    <li><a class="waves-effect" href="{% url 'experience' %}"><i class="material-icons">search</i>Programming
-            Experience</a></li>
 </ul>
