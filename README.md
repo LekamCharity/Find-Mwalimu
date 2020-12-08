@@ -4,9 +4,12 @@
 [LekamCharity](https://github.com/LekamCharity/Find-Mwalimu.git)  
   
 # Description  
-A django application that will allow users to search for programming tutors according to location and other categories as well as request for their private tutoring services.
-  
+This is a django web application that helps students who are interested in learning online programming to get private tutorial services and also they can find teachers who can guide them according to their experience.
+
 ##  Live Link  
+
+
+## Figma Link
 
 
 ## User Story  

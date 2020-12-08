@@ -19,7 +19,7 @@ class Tutor(models.Model):
     tutor_email = models.CharField(max_length=60)
     tutor_bio = models.TextField()
     languages = models.ManyToManyField(Language)
-    programming_experience = models.ForeignKey(Experience, null=True)
+    programming_experience = models.ForeignKey(Experience, null=True,  on_delete=models.CASCADE)
     tutor_image = models.ImageField(upload_to = 'profpics/', null=True)
     tutor_location = models.CharField(max_length=60, null=True)
 
