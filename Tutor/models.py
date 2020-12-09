@@ -14,6 +14,7 @@ class Language(models.Model):
     def __str__(self):
         return self.language_name
 
+
 class Tutor(models.Model):
     tutor_name = models.CharField(max_length=60)
     tutor_email = models.CharField(max_length=60)
