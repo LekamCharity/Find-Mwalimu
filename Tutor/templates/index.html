@@ -1,5 +1,4 @@
 {%extends 'base.html'%}
-
 {% block content %}
 {{block.super}}
 
@@ -30,7 +29,6 @@
 
         <div class="row">
             {% for tutor in tutors %}
-            <!-- displaying News articles -->
             <div class="col s12 m4 14">
                 <a class="black-text" href="/tutor/{{tutor.id}}">
                     <div class="card tutor-display container-fluid">
