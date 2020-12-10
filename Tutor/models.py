@@ -1,4 +1,6 @@
+from django.contrib.auth.models import User
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -21,7 +23,7 @@ class Tutor(models.Model):
     tutor_bio = models.TextField()
     languages = models.ManyToManyField(Language)
     programming_experience = models.ForeignKey(Experience, null=True,  on_delete=models.CASCADE)
-    tutor_image = models.ImageField(upload_to = 'profpics/', null=True)
+    tutor_image = CloudinaryField('images')
     tutor_location = models.CharField(max_length=60, null=True)
 
     def __str__(self):

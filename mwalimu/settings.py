@@ -9,6 +9,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 import os
 import django_heroku
 from pathlib import Path
@@ -41,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Tutor.apps.TutorConfig',
     'crispy_forms',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -160,6 +166,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+cloudinary.config( 
+  cloud_name = "findmwalimu", 
+  api_key = "751128992589414", 
+  api_secret = "YFZ6IxgpKdFx6WnRYw1s3YY4o50" 
+)
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
